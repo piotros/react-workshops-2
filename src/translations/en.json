@@ -1,3 +1,4 @@
 {
-  "Main.first-message": "Welcome with {name} from EN"
+  "Main.first-message": "Welcome with {name} from EN",
+  "fm.pierogi": "{amount, plural, =0 {no pierogies} one {# pierogi} other {#pierogies}}"
 }

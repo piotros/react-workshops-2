@@ -1,3 +1,4 @@
 {
-  "Main.first-message": "Witam z {name} z PL"
+  "Main.first-message": "Witam z {name} z PL",
+  "fm.pierogi": "{amount, plural, =0 {Nie mam pierogów} one {# pieróg} few {# pierogi} many {# pierogów} other {# pieroga}}"
 }

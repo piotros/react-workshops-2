@@ -1,8 +1,23 @@
 import React, {Component} from 'react'
 import Link from '../components/Link'
-import {FormattedMessage} from 'react-intl'
+import {
+  FormattedMessage,
+  FormattedDate,
+  FormattedRelative,
+  FormattedNumber,
+  FormattedTime,
+  FormattedPlural
+} from 'react-intl'
 
 class Main extends Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      amount: 1
+    }
+  }
+
   render() {
     return (
       <div className="main">
@@ -12,8 +27,33 @@ class Main extends Component {
           defaultMessage={'Welcome from {name}!'}
           values={{name: 'React'}}/>
         <Link path="/details">Go to details</Link>
+
         <br/>
-        Main
+
+        <FormattedDate value={Date.now()}/>
+
+        <br/>
+
+        <FormattedRelative value={'2017-01-10 20:00'}/>
+
+        <br/>
+
+        <FormattedNumber value={'22000.07'}/>
+
+        <br/>
+
+        <FormattedTime value={'2017-08-21 20:00'}/>
+
+        <br/>
+
+        {this.state.amount}{' '}
+        <FormattedPlural
+          value={this.state.amount}
+          one="pieróg"
+          few="pierogi"
+          many="pierogów"
+          other="pieroga"
+        />
       </div>
     )
   }

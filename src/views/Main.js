@@ -62,6 +62,7 @@ class Main extends Component {
         {this.state.amount}{' '}
         <FormattedPlural
           value={this.state.amount}
+          zero="pierogów"
           one="pieróg"
           few="pierogi"
           many="pierogów"
